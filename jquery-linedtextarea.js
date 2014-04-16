@@ -114,16 +114,18 @@
         lineNo = fillOutLines( codeLinesDiv, scrollTop + clientHeight, lineNo );
       });
 
-
       /* Should the textarea get resized outside of our control */
       textarea.resize( function(tn){
-        var domTextArea = $(this)[0];
+        var domTextArea	= $(this)[0];
         linesDiv.height( domTextArea.clientHeight + 6 );
       });
-          
+      
       /* in case the screen resizes */
-      $(window).on('resize', function(){
+      $(window).on('resize', function(ev){
         setWidth(textarea.outerWidth(true));
+        if(!$(ev.target).is(textarea)) { // textarea resize triggers window resize, don't create an infinite loop
+          textarea.resize();
+        }
         textarea.scroll();
       });
     
