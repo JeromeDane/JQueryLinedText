@@ -34,6 +34,8 @@
 }
 .linedtextarea textarea {
 	width: 100%;
+	position: relative; 
+	top: 1px;
 }
 
 .linedtextarea textarea, .linedwrap .codelines .lineno {
