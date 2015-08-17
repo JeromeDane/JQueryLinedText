@@ -81,8 +81,6 @@
       linedWrapDiv.prepend("<div class='lines'></div>");
       
       var linesDiv  = linedWrapDiv.find(".lines");
-      linesDiv.height( textarea.parent().parent().height());
-      
       
       /* Draw the number bar; filling it out where necessary */
       linesDiv.append( "<div class='codelines'></div>" );
@@ -95,10 +93,6 @@
         var position = parseInt( fontSize * opts.selectedLine ) - (textarea.height()/2);
         textarea[0].scrollTop = position;
       }
-
-      
-      /* Set left margin for proper textarea positioning*/
-	  linedTextAreaDiv.css('margin-left', linesDiv.outerWidth(true));
 
       /* React to the scroll event */
       textarea.scroll( function(tn){
@@ -122,8 +116,25 @@
         }
         textarea.scroll();
       });
-    
+	  
+	  /* Set left margin for proper textarea positioning*/
+	  var marginRetries = 0;
+	  function updateTextareaMargin() {
+		var leftMargin = linesDiv.outerWidth(true);
+		/* check to make sure CSS has been properly loaded and applied first */
+		if(marginRetries < 30 && leftMargin === linedWrapDiv.width()) {
+			marginRetries++;
+			setTimeout(updateTextareaMargin, 100);
+		} else {
+			linedTextAreaDiv.css('margin-left', leftMargin);
+			linesDiv.height(linedWrapDiv.height());
+			textarea.scroll();
+		}
+	  }
+	  updateTextareaMargin();
+	  
       $(window).resize(); // initial resize
+	  
 
     });
   };
