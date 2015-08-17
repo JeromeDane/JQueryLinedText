@@ -1,6 +1,6 @@
 
 var $ = require('jquery');
-require('jquery-linedtextarea');
+require('JQueryLinedText');
 
 $(function() {
 	$('#warning').hide();

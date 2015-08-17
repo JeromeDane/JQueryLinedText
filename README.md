@@ -23,3 +23,39 @@ $(function() {
 ```
 
 Installation: Copy the files to your web server and insert the .js and .css file and you are good to go. Requires JQuery 1.7+
+
+## Installing with npm
+
+This plugin can (and should) be installed using npm.  Include the following dependency in your `package.json`:
+
+```
+...
+  "dependencies": {
+    "JQueryLinedText": "git+https://github.com/JeromeDane/JQueryLinedText.git"
+  }
+...
+```
+
+## Examples
+
+There are two examples to play with. Clone this repository to your local machine to give them a try. `examples/basic.html` shows how to load and use this jQuery plugin in a static (traditional) web page. `examples/browserify.html` shows how to use it with npm and browserify.
+
+To use the browserify example, you will need to have [NodeJS](http://nodejs.org) installed. In your command line interface, navigate to the root folder of wherever you cloned this repository to your local machine and type the following command to install dependencies:
+
+```
+npm install
+```
+
+Next create `examples/browserify.bundle.js` by typing the following in your command line:
+
+```
+npm run build
+```
+
+You should now be able to open `examples/browserify.html`.
+
+Be sure to re-build your bundle file any time you make changes, or you can start the watch script to automatically rebundle everything by typing the following in your command line:
+
+```
+npm run watch
+```

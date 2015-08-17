@@ -49,7 +49,7 @@
   },
   "browser": {
     "jquery-linedtextarea-src": "./src/jquery-linedtextarea.js",
-    "jquery-linedtextarea": "./src/browserify.wrapper.js"
+    "JQueryLinedText": "./src/browserify.wrapper.js"
   },
   "browserify-shim": {
     "jquery-linedtextarea-src": {
