@@ -1,0 +1,66 @@
+{
+  "name": "JQueryLinedText",
+  "version": "1.1.0",
+  "description": "JQuery LinedTextArea Plugin\\",
+  "main": "src/browserify.wrapper.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "build": "browserify examples/browserify.js > examples/browserify.bundle.js -d",
+    "watch": "watchify examples/browserify.js -o examples/browserify.bundle.js -dv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JeromeDane/JQueryLinedText.git"
+  },
+  "keywords": [
+    "jquery",
+    "textarea",
+    "plugin",
+    "lined"
+  ],
+  "author": "Alan Williamson",
+  "contributors": [
+    {
+      "name": "Jerome Dane",
+      "email": "jerome.dane@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JeromeDane/JQueryLinedText/issues"
+  },
+  "homepage": "https://github.com/JeromeDane/JQueryLinedText",
+  "dependencies": {
+    "jquery": "^1.7.0"
+  },
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "browserify-css": "^0.6.1",
+    "browserify-shim": "^3.8.10",
+    "watchify": "^3.3.1"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-css",
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "jquery-linedtextarea-src": "./src/jquery-linedtextarea.js",
+    "jquery-linedtextarea": "./src/browserify.wrapper.js"
+  },
+  "browserify-shim": {
+    "jquery-linedtextarea-src": {
+	  "exports": "jQuery.linedtextarea",
+      "depends": [
+		"jquery:jQuery"
+      ]
+    }
+  },
+  "browserify-css": {
+    "autoInject": true,
+    "minify": true
+  }
+}
