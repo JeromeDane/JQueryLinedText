@@ -33,9 +33,9 @@
   },
   "homepage": "https://github.com/JeromeDane/JQueryLinedText",
   "dependencies": {
-    "browserify-shim": "^3.8.10",
-    "cssify": "^0.7.0",
-    "jquery": "^1.7.0"
+    "jquery": "^1.7.0",
+    "browserify-css": "^0.6.1",
+    "browserify-shim": "^3.8.10"
   },
   "devDependencies": {
     "browserify": "^11.0.1",
@@ -43,7 +43,7 @@
   },
   "browserify": {
     "transform": [
-      "cssify",
+      "browserify-css",
       "browserify-shim"
     ]
   },
