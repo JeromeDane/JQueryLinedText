@@ -124,7 +124,7 @@
       /* Should the textarea get resized outside of our control */
       textarea.resize( function(tn){
         var domTextArea	= $(this)[0];
-        linesDiv.height( domTextArea.clientHeight + 6 );
+        linesDiv.height( domTextArea.clientHeight);
       });
       
       /* in case the screen resizes */
