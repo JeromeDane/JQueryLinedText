@@ -42,6 +42,7 @@
 	padding-right:0.3em;
 	padding-top:0.3em;
 	border: 0;
+	overflow: auto;
 }
 
 .linedwrap .lines {
