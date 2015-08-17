@@ -6,7 +6,7 @@
     "Alan Williamson http://alan.blog-city.com/"
   ],
   "description": "lined text area",
-  "main": ["jquery-linedtextarea.js", "jquery-linedtextarea.css"],
+  "main": ["src/jquery-linedtextarea.js", "src/jquery-linedtextarea.css"],
   "keywords": [
     "jquery",
     "line",
