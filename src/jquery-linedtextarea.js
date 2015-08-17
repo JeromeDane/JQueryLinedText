@@ -81,7 +81,7 @@
       linedWrapDiv.prepend("<div class='lines'></div>");
       
       var linesDiv  = linedWrapDiv.find(".lines");
-      linesDiv.height( textarea.parent().parent().height() + 6 );
+      linesDiv.height( textarea.parent().parent().height());
       
       
       /* Draw the number bar; filling it out where necessary */
