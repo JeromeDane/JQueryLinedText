@@ -8,7 +8,7 @@ However, for my usage, this was way over kill. I wanted a simple line-number fac
 
 Quickly and easily to install, very light weight, you simply tell it which TEXTAREA's you want to be line tracked and it will go and do its thing. You can pass if you want a line highlighted. While it doesn't highlight the line inside the TEXTAREA control it highlights the side bar at the relevant place.
 
-<pre><script>
+```
 $(function() {
 
   // Target all classed with ".lined"
@@ -20,7 +20,6 @@ $(function() {
   $("#mytextarea").linedtextarea();
 
 });
-</script>
-</pre>
+```
 
 Installation: Copy the files to your web server and insert the .js and .css file and you are good to go. Requires JQuery 1.3+
