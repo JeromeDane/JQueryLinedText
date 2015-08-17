@@ -59,6 +59,15 @@
 			var lineNo = 1;
 			var textarea = $(this);
 			
+			/* Unwrap textarea if already rendered to allow for repeated calls on a given textarea */
+			if(textarea.parent().hasClass('linedtextarea')) {
+				var wrapper = textarea.parent().parent();
+				$('.lines', wrapper).remove();
+				textarea.unwrap().unwrap();
+				textarea.unbind('scroll');
+				textarea.unbind('resize');
+			}
+			
 			/* Turn off the wrapping of as we don't want to screw up the line numbers */
 			textarea.attr("wrap", "off");
 			textarea.css({resize:'none'});
