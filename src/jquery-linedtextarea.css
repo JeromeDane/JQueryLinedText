@@ -25,11 +25,15 @@
 .linedwrap {
 	border: 1px solid #c0c0c0;
 	padding: 3px;
+	position: relative;
 }
 
 .linedtextarea {
 	padding: 0px;
 	margin: 0px;
+}
+.linedtextarea textarea {
+	width: 100%;
 }
 
 .linedtextarea textarea, .linedwrap .codelines .lineno {

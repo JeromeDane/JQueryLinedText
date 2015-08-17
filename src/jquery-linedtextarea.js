@@ -97,21 +97,9 @@
       }
 
       
-      /* Set the width */
-      function setWidth(originalTextAreaWidth) {
-        var sidebarWidth          = linesDiv.outerWidth(true);
-        var paddingHorizontal     = parseInt( linedWrapDiv.css("border-left-width") ) + parseInt( linedWrapDiv.css("border-right-width") ) + parseInt( linedWrapDiv.css("padding-left") ) + parseInt( linedWrapDiv.css("padding-right") );
-        var linedWrapDivNewWidth  = originalTextAreaWidth - paddingHorizontal;
-        var textareaNewWidth      = linedWrapDivNewWidth - sidebarWidth - parseInt(textarea.css("padding-right")) - parseInt(textarea.css("padding-left"));
-        var textareaNewWidthPercent = textareaNewWidth*1.0 / linedWrapDivNewWidth
+      /* Set left margin for proper textarea positioning*/
+	  linedTextAreaDiv.css('margin-left', linesDiv.outerWidth(true));
 
-        textarea.width("" + textareaNewWidthPercent*100 + "%" );
-      }
-    
-      setWidth(originalTextAreaWidth);
-      
-
-      
       /* React to the scroll event */
       textarea.scroll( function(tn){
         var domTextArea   = $(this)[0];
@@ -129,7 +117,6 @@
       
       /* in case the screen resizes */
       $(window).on('resize', function(ev){
-        setWidth(textarea.outerWidth(true));
         if(!$(ev.target).is(textarea)) { // textarea resize triggers window resize, don't create an infinite loop
           textarea.resize();
         }
