@@ -1,0 +1,23 @@
+{
+  "name": "JQueryLinedText",
+  "version": "1.0.0",
+  "homepage": "http://alan.blog-city.com/jquerylinedtextarea.htm",
+  "authors": [
+    "Alan Williamson http://alan.blog-city.com/"
+  ],
+  "description": "lined text area",
+  "main": ["jquery-linedtextarea.js", "jquery-linedtextarea.css"],
+  "keywords": [
+    "jquery",
+    "line",
+    "textarea"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
