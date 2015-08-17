@@ -22,4 +22,4 @@ $(function() {
 });
 ```
 
-Installation: Copy the files to your web server and insert the .js and .css file and you are good to go. Requires JQuery 1.3+
+Installation: Copy the files to your web server and insert the .js and .css file and you are good to go. Requires JQuery 1.4+
