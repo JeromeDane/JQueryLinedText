@@ -1,6 +1,6 @@
 {
   "name": "JQueryLinedText",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "JQuery LinedTextArea Plugin\\",
   "main": "src/browserify.wrapper.js",
   "directories": {
@@ -48,7 +48,6 @@
     ]
   },
   "browser": {
-    "jquery-linedtextarea-src": "./src/jquery-linedtextarea.js",
     "JQueryLinedText": "./src/browserify.wrapper.js"
   },
   "browserify-shim": {
@@ -61,6 +60,7 @@
   },
   "browserify-css": {
     "autoInject": true,
-    "minify": true
+    "minify": true,
+    "rootDir": "."
   }
 }
